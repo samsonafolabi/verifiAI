@@ -7,7 +7,7 @@ interface IntentMetadata {
   normalizations: string[];
 }
 
-interface ParsedIntent {
+export interface ParsedIntent {
   fromToken: string;
   fromAmount: string;
   toToken: string;
@@ -26,4 +26,4 @@ type Failure = {
   error: string;
 };
 
-type ParseResult = Success | Failure;
+export type ParseResult = Success | Failure;
