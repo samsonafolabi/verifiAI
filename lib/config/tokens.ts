@@ -6,7 +6,6 @@ export interface TokenInfo {
   decimals: number;
 }
 
-// Token addresses by chain
 export const TOKENS: Record<SupportedChain, Record<string, TokenInfo>> = {
   ethereum: {
     USDC: {
@@ -54,7 +53,6 @@ export const TOKENS: Record<SupportedChain, Record<string, TokenInfo>> = {
   },
 };
 
-// Helper function: Get token info by symbol and chain
 export function getTokenInfo(
   chain: SupportedChain,
   symbol: string,
@@ -62,7 +60,6 @@ export function getTokenInfo(
   return TOKENS[chain][symbol] || null;
 }
 
-// Helper function: Get token symbol by address and chain
 export function getTokenSymbol(
   chain: SupportedChain,
   address: string,
